@@ -11,7 +11,7 @@ services:
         - PORT=80
         - DEBUG=False
         - DOCKERIZE_ARGS="-wait tcp://db:3306 -timeout 60s"
-        # - APP_DIST_STORAGE="file:///app-dist"
+        - APP_DIST_STORAGE="file:///app-dist"
 
     db:
         image: mariadb:10.7.1

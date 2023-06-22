@@ -36,6 +36,7 @@ MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "whitenoise.middleware.WhiteNoiseMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
+    "oauth2_provider.middleware.OAuth2TokenMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
@@ -141,6 +142,7 @@ AUTHENTICATION_BACKENDS = (
     "social_core.backends.microsoft.MicrosoftOAuth2",
     "social_core.backends.google.GoogleOAuth2",
     "django.contrib.auth.backends.ModelBackend",
+    "oauth2_provider.backends.OAuth2Backend",
 )
 
 SOCIAL_AUTH_GITHUB_SCOPE = ["read:user", "user:email"]
@@ -180,6 +182,9 @@ for key in [
     "SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET",
     "SOCIAL_AUTH_MICROSOFT_GRAPH_KEY",
     "SOCIAL_AUTH_MICROSOFT_GRAPH_SECRET",
+    "SOCIAL_AUTH_OIDC_OIDC_ENDPOINT",
+    "SOCIAL_AUTH_OIDC_KEY",
+    "SOCIAL_AUTH_OIDC_SECRET",
     "CONNECTION_GATEWAY_AUTH_CA",
     "CONNECTION_GATEWAY_AUTH_CERTIFICATE",
     "CONNECTION_GATEWAY_AUTH_KEY",
